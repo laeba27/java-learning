@@ -1,0 +1,6 @@
+The video explains how the Java Virtual Machine (JVM) manages memory, specifically distinguishing between Stack and Heap memory.
+Here's a summary:
+Stack Memory (0:49): This memory area operates on a "Last In, First Out" (LIFO) principle. It's primarily used to store local variables and method calls. Each method call gets its own "stack frame." For example, when main calls add, a new stack for add is created, holding its local variables like N1 and N2 (4:34). Once a method finishes execution, its stack frame is removed.
+Heap Memory (1:20): This is a dynamic memory area where objects and their instance variables reside. When you create an object using new, it's allocated on the Heap. The video uses the Calculator object and its num instance variable as an example (7:06).
+Connecting Stack and Heap: While instance variables are in the Heap, the reference variables (like obj or obj1) that point to these objects are stored in the Stack, along with an address linking them to the object in the Heap (9:01). This link allows methods in the Stack to access and manipulate objects in the Heap.
+Object Independence: The video demonstrates that each object in the Heap is independent. Changing an instance variable for one object does not affect another object, even if they are of the same type (11:42).
